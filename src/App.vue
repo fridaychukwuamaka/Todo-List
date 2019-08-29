@@ -1,20 +1,33 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <routerView></routerView>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Home from './components/Home'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
-  }
+    Home
+  },
+  data: () => {
+    return {
+      edit: false,
+      name: "",
+      editName: '',
+      index: 0
+    }
+}
 }
 </script>
 
 <style>
-
+#app{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
 </style>
